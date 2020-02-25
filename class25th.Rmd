@@ -11,7 +11,7 @@ library(tidyverse)
 library(gt)
 
 ```
-
+## Simple Fucntions
 ```{r}
 add_dice <- function(n = 1) {
   stopifnot(is.numeric(n))
@@ -38,7 +38,7 @@ roll_two_dice <- function(){
 
 x <- tibble(value =  map_int(1:1000, ~ roll_two_dice()))
 
-ggplot(x, aes(value)) + geom_histogram()
+ggplot(x, aes(value)) + geom_bar()
 
 
 
